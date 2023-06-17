@@ -1,0 +1,9 @@
+@use 'variables';
+
+.titulo-pagina {
+    padding: 20px;
+    font-family: variables.$fontStaat;
+    font-size: 3em;
+    color: variables.$mainDark;
+    text-transform: uppercase;
+}

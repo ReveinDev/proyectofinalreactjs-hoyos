@@ -1,0 +1,147 @@
+@use 'variables';
+
+.navbar {
+    background-color: variables.$mainRed;
+
+    .container-fluid {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: nowrap;
+
+        .dropdown-toggle {
+            color: variables.$mainLight;
+            font-family: variables.$fontBebas;
+            font-size: 2.5em;
+            text-shadow: 3px 3px 3px variables.$mainDark;
+            width: 160px;
+
+            &:focus {
+                color: variables.$mainYellow;
+                text-shadow: 3px 3px 3px variables.$mainDark
+            }
+        }
+
+        .dropdown-menu {
+            background-color: variables.$mainLight;
+            font-family: variables.$fontStaat;
+            font-size: 1.3em;
+
+            .dropdown-item {
+                &:hover {
+                    background-color: variables.$subDark;
+                    color: variables.$mainLight;
+                }
+            }
+        }
+
+        .boton-nav-contacto {
+            color: variables.$mainLight;
+            font-family: variables.$fontBebas;
+            font-size: 2.5em;
+            text-shadow: 3px 3px 3px variables.$mainDark;
+            position: relative;
+            cursor: pointer;
+
+            &::after {
+                content: '';
+                position: absolute;
+                width: 100%;
+                transform: scaleX(0);
+                height: 3px;
+                bottom: 8px;
+                left: 2px;
+                background-color: variables.$mainYellow;
+                transform-origin: center;
+                transition: transform 0.25s ease-out;
+            }
+
+            &:hover::after {
+                transform: scaleX(1);
+                transform-origin: center;
+            }
+        }
+
+        .navbar-brand {
+            width: 25%;
+
+            .navbar-logo {
+                padding: 5px;
+                width: 90%;
+            }
+        }
+
+        .boton-nav-form {
+            background-color: transparent;
+            color: variables.$mainLight;
+            font-family: variables.$fontBebas;
+            font-size: 2.25em;
+            padding: 20px;
+            border: none;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-shadow: 3px 3px 3px variables.$mainDark;
+            cursor: pointer;
+            gap: 5px;
+
+            &::after {
+                content: '';
+                position: absolute;
+                width: 100%;
+                transform: scaleX(0);
+                height: 3px;
+                bottom: 10px;
+                left: 3px;
+                background-color: variables.$mainYellow;
+                transform-origin: center;
+                transition: transform 0.25s ease-out;
+            }
+
+            &:hover::after {
+                transform: scaleX(1);
+                transform-origin: center;
+            }
+        }
+
+        .boton-carrito {
+            background-color: transparent;
+            border: none;
+            color: variables.$mainLight;
+            font-size: 2.25em;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            outline: none;
+            width: 50px;
+            height: 50px;
+            transition: .5s, color .10s;
+            
+            &:hover {
+                cursor: pointer;
+            }
+
+            &:active {
+                color: variables.$mainYellow;
+            }
+
+            .cantidad-carrito {
+                background-color: variables.$mainDark;
+                color: variables.$mainLight;
+                border-radius: 50%;
+                position: absolute;
+                top: -10px;
+                right: -10px;
+                width: 30px;
+                height: 30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-family: variables.$fontStaat;
+                font-size: 0.6em;
+            }
+        }
+    }
+}
