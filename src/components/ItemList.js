@@ -1,14 +1,14 @@
 import Item from "./Item"
 
-const ItemList = ({ comida }) => {
+const ItemList = ({ comida, titulo }) => {
   return (
-    <div>
-        <h1>Nuestro Menu</h1>
+    <section>
+        <h1 className="titulo-pagina">{titulo}</h1>
 
-        <div>
+        <article className="comidas-container">
             {comida.map((item) => <Item comida={item} key={item.id} />)}
-        </div>
-    </div>
+        </article>
+    </section>
   )
 }
 

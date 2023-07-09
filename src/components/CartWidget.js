@@ -1,6 +1,6 @@
 export const CartWidget = () => {
-    return  <button type="button" class="btn boton-carrito">
-                <i class="fa-solid fa-cart-shopping"></i>
-                <span class="cantidad-carrito">0</span>
+    return  <button type="button" className="btn boton-carrito">
+                <i className="fa-solid fa-cart-shopping"></i>
+                <span className="cantidad-carrito">0</span>
             </button>
 }

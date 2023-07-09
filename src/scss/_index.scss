@@ -1,9 +1,155 @@
 @use 'variables';
 
+main {
+    background-color: variables.$mainDark;
+}
+
 .titulo-pagina {
-    padding: 20px;
-    font-family: variables.$fontStaat;
-    font-size: 3em;
-    color: variables.$mainDark;
+    text-align: center;
+    padding-top: 30px;
+    margin-bottom: 30px;
     text-transform: uppercase;
+    font-family: variables.$fontAlfa;
+    font-size: 4em;
+    font-style: italic;
+    color: variables.$mainLight;
+}
+
+.comidas-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    .card-comidas {
+        background-color: variables.$subDark;
+        border: 2px solid variables.$mainYellow;
+        border-radius: 5px;
+        width: 250px;
+        height: 400px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        align-content: space-between;
+        margin-bottom: 20px;
+        padding: 10px;
+        position: relative;
+        text-align: center;
+
+        &:hover {
+            box-shadow: 0 2px 30px 0 variables.$mainRed, 0 2px 30px 0 variables.$mainYellow;
+            transform: scale3d(1.1, 1.1, 0.3);
+        }
+
+        .comidas-img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 5px;
+            border: 2px solid variables.$mainDark;
+        }
+
+        .comidas-info {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 100px 50px 100px;
+            justify-items: center;
+            align-items: center;
+            grid-template-areas: 
+                "titulo"
+                "precio"
+                "verdetalle";
+
+            .comidas-nombre {
+                grid-area: titulo;
+                color: variables.$mainLight;
+                font-family: variables.$fontTeko;
+                font-size: 1.9em;
+                margin-top: 10px;
+                text-transform: uppercase;
+            }
+
+            .comidas-precio {
+                grid-area: precio;
+                text-align: center;
+                color: variables.$mainYellow;
+                font-family: variables.$fontArchivo;
+                font-size: 1.5em;
+                text-shadow: 2px 2px 2px variables.$mainDark;
+            }
+
+            .comidas-boton-detalle {
+                grid-area: verdetalle;
+                background-color: variables.$mainRed;
+                border: 2px solid variables.$mainYellow;
+                border-radius: 5px;
+                color: variables.$mainLight;
+                cursor: pointer;
+                font-family: variables.$fontKanit;
+                font-size: 15px;
+                text-align: center;
+                margin-bottom: 10px;
+                padding: 10px 20px;
+                transition: .5s, color .10s;
+                text-transform: uppercase;
+
+                &:active {
+                    transform: translate(0px, 2px);
+                    box-shadow: 0px 1px 0px variables.$mainRed;
+                }
+            }
+        }
+    }
+}
+
+.comida-detalle-container {
+    .comida-detalle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 50px 0;
+        gap: 30px;
+
+        .comida-detalle-imagen {
+            width: 40%;
+            border-radius: 5px;
+            border: 2px solid variables.$mainYellow;
+            margin-left: 30px;
+        }
+
+        .comida-detalle-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+            padding-right: 20px;
+
+            .comida-detalle-titulo {
+                color: variables.$mainYellow;
+                font-family: variables.$fontAlfa;
+                font-size: 2.9em;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                text-align: center;
+            }
+
+            .comida-detalle-descripcion {
+                color: variables.$mainLight;
+                font-family: variables.$fontOswald;
+                font-size: 1.9em;
+                font-style: italic;
+                text-align: center;
+            }
+
+            .comida-detalle-precio {
+                color: variables.$mainRed;
+                font-family: variables.$fontArchivo;
+                font-size: 3em;
+                text-align: center;
+            }
+        }
+    }
 }
