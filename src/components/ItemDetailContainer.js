@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react"
-import { obtenerItemsId } from "../helpers/ObtenerItems";
 import ItemDetail from "./ItemDetail";
 import { useParams } from "react-router-dom";
+import { doc, getDoc } from "firebase/firestore";
+import { database } from "../firebase/configdb";
 
 
 export const ItemDetailContainer = () => {
@@ -9,10 +10,13 @@ export const ItemDetailContainer = () => {
     const id = useParams().id;
 
     useEffect(() => {
-      obtenerItemsId(Number(id))
-          .then((respuesta) => {
-              setComidaIndividual(respuesta);
-          })
+      const refDbDoc = doc(database, "menucomidas", id)
+      getDoc(refDbDoc)
+        .then((respuesta) => {
+          setComidaIndividual(
+            { ...respuesta.data(), id: respuesta.id }
+          )
+        })
     }, [id]);
 
   return (

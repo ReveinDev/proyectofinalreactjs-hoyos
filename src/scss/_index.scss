@@ -130,7 +130,7 @@ main {
             .comida-detalle-titulo {
                 color: variables.$mainYellow;
                 font-family: variables.$fontAlfa;
-                font-size: 2.9em;
+                font-size: 3em;
                 letter-spacing: 2px;
                 text-transform: uppercase;
                 text-align: center;
@@ -139,7 +139,7 @@ main {
             .comida-detalle-descripcion {
                 color: variables.$mainLight;
                 font-family: variables.$fontOswald;
-                font-size: 1.9em;
+                font-size: 2em;
                 font-style: italic;
                 text-align: center;
             }
@@ -149,6 +149,52 @@ main {
                 font-family: variables.$fontArchivo;
                 font-size: 3em;
                 text-align: center;
+            }
+
+            .cantidad-container {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                .cantidad-inner-container {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-bottom: 50px;
+
+                    .restar-cantidad,
+                    .sumar-cantidad {
+                        background-color: transparent;
+                        border: none;
+                        color: variables.$mainYellow;
+                        font-size: 1.25em;
+                        cursor: pointer;
+
+                        &:active {
+                            color: variables.$mainRed;
+                        }
+                    }
+        
+                    .cantidad-comida {
+                        font-family: variables.$fontArchivo;
+                        font-size: 2.5em;
+                        color: variables.$mainLight;
+                        margin: 0 20px;
+                    }
+                }
+
+                .boton-compra {
+                    background-color: variables.$mainRed;
+                    border: 2px solid variables.$mainYellow;
+                    border-radius: 5px;
+                    color: variables.$mainLight;
+                    cursor: pointer;
+                    font-family: variables.$fontArchivo;
+                    font-size: 1.25em;
+                    text-align: center;
+                    padding: 10px 20px;
+                }
             }
         }
     }

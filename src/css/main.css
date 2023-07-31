@@ -253,7 +253,7 @@ main {
 .comida-detalle-container .comida-detalle .comida-detalle-info .comida-detalle-titulo {
   color: #ECA72C;
   font-family: "Alfa Slab One", cursive;
-  font-size: 2.9em;
+  font-size: 3em;
   letter-spacing: 2px;
   text-transform: uppercase;
   text-align: center;
@@ -261,7 +261,7 @@ main {
 .comida-detalle-container .comida-detalle .comida-detalle-info .comida-detalle-descripcion {
   color: #F3F3F3;
   font-family: "Oswald", sans-serif;
-  font-size: 1.9em;
+  font-size: 2em;
   font-style: italic;
   text-align: center;
 }
@@ -270,6 +270,47 @@ main {
   font-family: "Archivo Black", sans-serif;
   font-size: 3em;
   text-align: center;
+}
+.comida-detalle-container .comida-detalle .comida-detalle-info .cantidad-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.comida-detalle-container .comida-detalle .comida-detalle-info .cantidad-container .cantidad-inner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.comida-detalle-container .comida-detalle .comida-detalle-info .cantidad-container .cantidad-inner-container .restar-cantidad,
+.comida-detalle-container .comida-detalle .comida-detalle-info .cantidad-container .cantidad-inner-container .sumar-cantidad {
+  background-color: transparent;
+  border: none;
+  color: #ECA72C;
+  font-size: 1.25em;
+  cursor: pointer;
+}
+.comida-detalle-container .comida-detalle .comida-detalle-info .cantidad-container .cantidad-inner-container .restar-cantidad:active,
+.comida-detalle-container .comida-detalle .comida-detalle-info .cantidad-container .cantidad-inner-container .sumar-cantidad:active {
+  color: #F71735;
+}
+.comida-detalle-container .comida-detalle .comida-detalle-info .cantidad-container .cantidad-inner-container .cantidad-comida {
+  font-family: "Archivo Black", sans-serif;
+  font-size: 2.5em;
+  color: #F3F3F3;
+  margin: 0 20px;
+}
+.comida-detalle-container .comida-detalle .comida-detalle-info .cantidad-container .boton-compra {
+  background-color: #F71735;
+  border: 2px solid #ECA72C;
+  border-radius: 5px;
+  color: #F3F3F3;
+  cursor: pointer;
+  font-family: "Archivo Black", sans-serif;
+  font-size: 1.25em;
+  text-align: center;
+  padding: 10px 20px;
 }
 
 /*# sourceMappingURL=main.css.map */
