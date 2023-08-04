@@ -5,7 +5,7 @@ import { serverTimestamp, collection, addDoc } from "firebase/firestore";
 import { database } from "../firebase/configdb";
 
 export const Orders = () => {
-    const {cart, precioTotal, eliminarCarritoEntero} = useContext(CartContext);
+    const {cart, precioTotal, eliminarCarritoEnteroPedidoTerminado} = useContext(CartContext);
     const {register, handleSubmit} = useForm();
     const [orderId, setOrderId] = useState("");
     const ordenPedido = (datos) => {
@@ -21,15 +21,17 @@ export const Orders = () => {
         addDoc(refOrdenPedido, pedido)
             .then((res) => {
                 setOrderId(res.id);
-                eliminarCarritoEntero();
+                eliminarCarritoEnteroPedidoTerminado();
             })
     }
 
     if(orderId) {
         return (
-            <div>
-                <h2>muchas gracias por tu compra!</h2>
-                <p>tu numero de orden de pedido es: {orderId}</p>
+            <div className="compra-exitosa-container">
+                <h1 className="compra-exitosa-titulo">muchas gracias por tu compra!</h1>
+                <p className="compra-exitosa-img"><i class="bi bi-bag-heart-fill"></i></p>
+                <p className="compra-exitosa-texto">tu numero de orden de pedido es:</p>
+                <p className="compra-exitosa-numero">{orderId}</p>
             </div>
         );
     }
@@ -38,16 +40,16 @@ export const Orders = () => {
     <div className="formulario-container">
         <h1 className="formulario-titulo">orden de compra</h1>
         <form className="formulario-inner" onSubmit={handleSubmit(ordenPedido)}>
-            <div className="form-floating">
-                <input type="text" className="form-control" id="floatingName" placeholder="Name" {...register("nombre")} required />
+            <div className="form-floating w-25">
+                <input type="text" className="form-control form-control-lg" id="floatingName" placeholder="Name" {...register("nombre")} required />
                 <label htmlFor="floatingName">Ingresa tu nombre</label>
             </div>
-            <div className="form-floating">
-                <input type="email" className="form-control" id="floatingEmail" placeholder="Email" {...register("email")} required />
+            <div className="form-floating w-25">
+                <input type="email" className="form-control form-control-lg" id="floatingEmail" placeholder="Email" {...register("email")} required />
                 <label htmlFor="floatingEmail">Ingresa tu email</label>
             </div>
-            <div className="form-floating">
-                <input type="text" className="form-control" id="floatingPhone" placeholder="Phone" {...register("telefono")} required />
+            <div className="form-floating w-25">
+                <input type="text" className="form-control form-control-lg" id="floatingPhone" placeholder="Phone" {...register("telefono")} required />
                 <label htmlFor="floatingPhone">Ingresa tu numero de telefono</label>
             </div>
             <button className="btn btn-primary" type="submit">finalizar compra</button>

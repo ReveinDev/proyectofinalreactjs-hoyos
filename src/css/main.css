@@ -313,4 +313,242 @@ main {
   padding: 10px 20px;
 }
 
+.carrito-container {
+  background-color: #14080E;
+}
+.carrito-container .carrito-header {
+  text-align: center;
+  padding-top: 30px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  font-family: "Alfa Slab One", cursive;
+  font-size: 4em;
+  font-style: italic;
+  color: #F3F3F3;
+}
+.carrito-container .carrito-info .carrito-info-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+.carrito-container .carrito-info .carrito-info-inner .carrito-info-img {
+  width: 15%;
+  border: 2px solid #ECA72C;
+}
+.carrito-container .carrito-info .carrito-info-inner .carrito-info-titulo {
+  color: #F3F3F3;
+  font-family: "Staatliches", cursive;
+  font-size: 2.2em;
+  width: 40%;
+  text-align: center;
+  padding-left: 10px;
+}
+.carrito-container .carrito-info .carrito-info-inner .carrito-info-cantidad {
+  text-transform: uppercase;
+  color: #F3F3F3;
+  font-family: "Rubik", sans-serif;
+  font-size: 2em;
+  width: 20%;
+  text-align: center;
+}
+.carrito-container .carrito-info .carrito-info-inner .carrito-info-precio {
+  color: #F3F3F3;
+  font-family: "Archivo Black", sans-serif;
+  font-size: 2em;
+  text-align: center;
+  width: 15%;
+}
+.carrito-container .carrito-info .carrito-info-inner .eliminar-item {
+  background-color: transparent;
+  border: none;
+  color: #F71735;
+  font-size: 30px;
+  cursor: pointer;
+  width: 10%;
+  padding-bottom: 20px;
+}
+.carrito-container .carrito-info .carrito-info-inner .eliminar-item:active {
+  color: #F3F3F3;
+}
+.carrito-container .carrito-footer .carrito-footer-lleno {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 10px;
+}
+.carrito-container .carrito-footer .carrito-footer-lleno .boton-vaciar {
+  width: 350px;
+  height: 40px;
+  background-color: #F71735;
+  border: none;
+  border-radius: 50px;
+  color: #F3F3F3;
+  font-family: "Staatliches", cursive;
+  font-size: 1.3em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+.carrito-container .carrito-footer .carrito-footer-lleno .boton-vaciar:active {
+  color: #08140E;
+  background-color: #F3F3F3;
+}
+.carrito-container .carrito-footer .carrito-footer-lleno .total-carrito {
+  color: #ECA72C;
+  font-family: "Bebas Neue", cursive;
+  font-size: 3em;
+}
+.carrito-container .carrito-footer .carrito-footer-lleno .boton-finalizar {
+  text-decoration: none;
+  width: 350px;
+  height: 40px;
+  background-color: #17E7B7;
+  border: none;
+  border-radius: 50px;
+  color: #08140E;
+  font-family: "Staatliches", cursive;
+  font-size: 1.3em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+.carrito-container .carrito-footer .carrito-footer-lleno .boton-finalizar:active {
+  color: #08140E;
+  background-color: #F3F3F3;
+}
+.carrito-container .carrito-footer .carrito-footer-vacio {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.carrito-container .carrito-footer .carrito-footer-vacio .carrito-vacio-texto {
+  text-transform: uppercase;
+  color: #F3F3F3;
+  font-family: "VT323", monospace;
+  font-size: 6em;
+  text-align: center;
+  padding: 10px;
+}
+.carrito-container .carrito-footer .carrito-footer-vacio .carrito-vacio-img {
+  color: #F71735;
+  font-size: 4em;
+  padding-bottom: 20px;
+}
+.carrito-container .carrito-footer .carrito-footer-vacio .boton-volver {
+  text-decoration: none;
+  width: 350px;
+  height: 60px;
+  background-color: #ECA72C;
+  border: none;
+  border-radius: 50px;
+  color: #08140E;
+  font-family: "Staatliches", cursive;
+  font-size: 1.75em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  cursor: pointer;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+.carrito-container .carrito-footer .carrito-footer-vacio .boton-volver:active {
+  color: #08140E;
+  background-color: #F3F3F3;
+}
+
+.formulario-container {
+  background-color: #14080E;
+}
+.formulario-container .formulario-titulo {
+  text-align: center;
+  padding-top: 30px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  font-family: "Alfa Slab One", cursive;
+  font-size: 4em;
+  font-style: italic;
+  color: #F3F3F3;
+}
+.formulario-container .formulario-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.formulario-container .formulario-inner .form-floating {
+  font-family: "Staatliches", cursive;
+}
+.formulario-container .formulario-inner .form-floating input {
+  font-size: 1.5em;
+}
+.formulario-container .formulario-inner .btn {
+  text-decoration: none;
+  width: 350px;
+  height: 60px;
+  background-color: #17E7B7;
+  border: none;
+  border-radius: 50px;
+  color: #08140E;
+  font-family: "Staatliches", cursive;
+  font-size: 1.75em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  cursor: pointer;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+.formulario-container .formulario-inner .btn:active {
+  color: #08140E;
+  background-color: #F3F3F3;
+}
+
+.compra-exitosa-container {
+  background-color: #14080E;
+}
+.compra-exitosa-container .compra-exitosa-titulo {
+  text-align: center;
+  padding-top: 30px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  font-family: "Bebas Neue", cursive;
+  font-size: 6em;
+  font-style: italic;
+  color: #F3F3F3;
+}
+.compra-exitosa-container .compra-exitosa-img {
+  color: #17E7B7;
+  font-size: 6em;
+  text-align: center;
+  padding-bottom: 20px;
+}
+.compra-exitosa-container .compra-exitosa-texto {
+  text-transform: uppercase;
+  color: #F3F3F3;
+  font-family: "Archivo Black", sans-serif;
+  font-size: 4em;
+  text-align: center;
+  padding: 10px;
+}
+.compra-exitosa-container .compra-exitosa-numero {
+  text-transform: uppercase;
+  color: #ECA72C;
+  font-family: "Staatliches", cursive;
+  font-size: 5em;
+  text-align: center;
+  padding: 10px;
+  letter-spacing: 2px;
+}
+
 /*# sourceMappingURL=main.css.map */

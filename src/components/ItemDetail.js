@@ -4,13 +4,10 @@ import { CartContext } from "../context/CartContext";
 
 const ItemDetail = ( {comidaIndividual} ) => {
   const {clickAgregar} = useContext(CartContext);
-
   const [cantidad, setCantidad] = useState(1);
-
   const clickRestar = () => {
     cantidad > 1 && setCantidad(cantidad -1)
   }
-
   const clickSumar = () => {
     cantidad < comidaIndividual.stock && setCantidad(cantidad + 1)
   }
